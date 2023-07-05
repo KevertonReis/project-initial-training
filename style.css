@@ -6,20 +6,20 @@
 :root {
   --text-color: white;
   --bg-url: url(./assets/bg-mobile.jpg);
-  --stroke-color: rgba(255,255,255, 0.5);
-  --surface-color: rgba(255,255,255, 0.05);
-  --surface-color-hover: rgba(0,0,0,0.02);
-  --highlight-color: rgba(255,255,255, 0.2);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/moon-stars.svg);
 }
 
 .light {
   --text-color: black;
   --bg-url: url(./assets/bg-mobile-light.jpg);
-  --stroke-color: rgba(0,0,0, 0.5); 
-  --surface-color: rgba(0,0,0, 0.05);
-  --surface-color-hover: rgba(0,0,0,0.02);
-  --highlight-color: rgba(0,0,0,0.1);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/sun.svg);
 }
 
@@ -47,6 +47,7 @@ body * {
 #profile img {
   width: 112px;
   border-radius: 50%;
+  filter:drop-shadow(6px 2px 6px #81027f)
 }
 
 #profile p {
@@ -58,17 +59,28 @@ body * {
 
 #switch {
   position: relative;
+  width: 64px;
+  margin: 4px auto;
 }
-#switch button{
+
+#switch button {
   width: 32px;
   height: 32px;
   background: #fff var(--switch-bg-url) no-repeat center;
   border: 0;
   border-radius: 50%;
   position: absolute;
-  top: 0;
+  transform: translateY(-50%);
+  top: 50%;
   left: 0;
   z-index: 1;
+  cursor: pointer;
+}
+
+
+.light #switch button {
+  left: initial;
+  right: 0;
 }
 
 #switch span {
