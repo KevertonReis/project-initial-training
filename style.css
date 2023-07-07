@@ -47,7 +47,7 @@ body * {
 #profile img {
   width: 112px;
   border-radius: 50%;
-  filter:drop-shadow(6px 2px 6px #81027f)
+  filter: drop-shadow(6px 2px 6px #81027f);
 }
 
 #profile p {
@@ -77,7 +77,6 @@ body * {
   cursor: pointer;
 }
 
-
 .light #switch button {
   left: initial;
   right: 0;
@@ -91,6 +90,7 @@ body * {
   border: 1px solid var(--stroke-color);
   -webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
+  cursor: pointer;
 }
 
 /* Links */
@@ -135,10 +135,26 @@ ul li a:hover {
   align-items: center;
   justify-content: center;
   padding: 16px;
-  transition: background 0.2s;
+  transition-property: background 0.2s;
   border-radius: 50%;
 }
 
 #sociallinks a:hover {
   background: var(--highlight-color);
+  animation: shake 0.25s;
+}
+
+@keyframes shake {
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(15deg);
+  }
+  30% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(15deg);
+  }
 }
